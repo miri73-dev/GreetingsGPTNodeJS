@@ -19,7 +19,7 @@ const secret = "JIs%WCfS#Sl454d5FX";
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`Example app listening on http://localhost:${process.env.PORT}`)
+    console.log(`Example app listening on http://localhost:8080`)
   })
 
 console.log("hi")
