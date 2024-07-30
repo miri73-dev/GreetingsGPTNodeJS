@@ -12,16 +12,23 @@ const openai = new OpenAI ({
 const appController={
    post: async (req, res) => {
     const runPrompt = async()=>{
-        const prompt = `Don't include in the response
-            "creating", "creating an ai", "generating", "ai", "desgining", "video", "incorporating".
-            My request is: Please provide 3 ideas of ${req.body.text}
+        const prompt = ` Do not include in the response
+            "Do not include in the response
+            "Creator", "AI Creator", "Creator", "AI", "Design", "Video", "Integration".
+            My request is:
+            I need to write a greeting for ${req.body.detail}
+            The greeting should be in the writing type of: ${req.body.writing}
+            The greeting should be in the mood of ${req.body.atmosphere} and in the style: ${req.body.style}
+            And please provide 3 ideas that fit the criteria.
             Also, return the response in JSON format that can be parsed as follows:
             {
             "1":"...",
             "2":"...",
-            "3":"..."
+            "3":..."
+            }
+            Please note that all answers will not exceed 120 words
             }`;
-        
+
             const response = await openai.chat.completions.create({
               model:"gpt-3.5-turbo",
               messages:[{role: "system", content: prompt}],
