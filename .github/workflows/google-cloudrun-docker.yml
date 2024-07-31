@@ -100,7 +100,7 @@ jobs:
         run: |-
           # docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}${{env.IMAGE}}:${{github.sha}}" ./
           # docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{env.IMAGE}}:${{ github.sha }}"
-          docker build -t "$GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO/$IMAGE:$GITHUB_SHA" .
+          docker build -t "$GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO:$IMAGE:$GITHUB_SHA" .
           docker push "$GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPO/$IMAGE:$GITHUB_SHA"
 
       # END - Docker auth and build
