@@ -54,7 +54,7 @@ env:
   REGION: us-central1 # TODO: update Cloud Run service region
   
   # cloud run
-  GAR_LOCATION: YOUR_GAR_LOCATION # TODO: update Artifact Registry location
+  GAR_LOCATION: us-central1 # TODO: update Artifact Registry location
   IMAPE: my image
   REPO: my repo
 
