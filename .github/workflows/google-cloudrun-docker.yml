@@ -55,7 +55,7 @@ env:
   
   # cloud run
   GAR_LOCATION: us-central1 # TODO: update Artifact Registry location
-  IMAPE: greetings-gpt-node-js
+  IMAPE: greetingsgptnodejs
   REPO: cloud-run-source-deploy
 
 jobs:
