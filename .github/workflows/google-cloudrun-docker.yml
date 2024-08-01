@@ -116,3 +116,12 @@ jobs:
       # If required, use the Cloud Run url output in later steps
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
+        
+      - name: Run application tests
+        run: |
+          echo "Testing application"
+          # Example of running a test script or command
+          curl -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" http://localhost:8080/test
+
+      - name: Display URL
+        run: echo ${{ steps.deploy.outputs.url }}
