@@ -8,7 +8,7 @@ const openai = new OpenAI ({
     apiKey:process.env.OPENAI_API_KEY,    
 });
 
-console.log(process.env.OPENAI_API_KEY);
+console.log("----ENV----"+process.env.OPENAI_API_KEY);
 
 const appController={
    post: async (req, res) => {
