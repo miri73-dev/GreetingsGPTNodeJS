@@ -5,7 +5,7 @@ dotenv.config();
 const secret = "JIs%WCfS#Sl454d5FX";
 
 const openai = new OpenAI ({
-    apiKey:OPENAI_API_KEY,    
+    apiKey:process.env.OPENAI_API_KEY,    
 });
 
 const appController={
