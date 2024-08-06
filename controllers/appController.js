@@ -8,13 +8,6 @@ const openai = new OpenAI ({
     apiKey:process.env.OPENAI_API_KEY,
 });
 
-const options = {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-    },
-  };
-
 console.log("----ENV----"+process.env.OPENAI_API_KEY);
 
 const appController={
