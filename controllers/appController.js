@@ -1,12 +1,11 @@
 import dotenv from "dotenv";
 import OpenAI from 'openai';
-import jwt from "jsonwebtoken";
 
 dotenv.config();
 const secret = "JIs%WCfS#Sl454d5FX";
 
 const openai = new OpenAI ({
-    apiKey:process.env.OPENAI_API_KEY,    
+    apiKey:OPENAI_API_KEY,    
 });
 
 const appController={
